@@ -68,7 +68,7 @@ function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
         >
-          Company Law & Corporate Advocates Advisory
+          Companys Law & Corporate Advocates Advisory
         </motion.h1>
 
         <motion.h2
