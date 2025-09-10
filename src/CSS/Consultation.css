@@ -1,17 +1,12 @@
-/* Section background with image + overlay */
 .consultation-section {
   position: relative;
   padding: 80px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background: url("https://images.unsplash.com/photo-1521791055366-0d553872125f") center/cover no-repeat;
   color: #fff;
+  background: url("https://images.unsplash.com/photo-1521791055366-0d553872125f")
+    center/cover no-repeat;
   overflow: hidden;
 }
 
-/* Dark overlay */
 .consultation-section::before {
   content: "";
   position: absolute;
@@ -24,9 +19,8 @@
   pointer-events: none;
 }
 
-/* Keep content above overlay */
 .consultation-header,
-.consultation-form,
+.consultation-content,
 .status-message {
   position: relative;
   z-index: 2;
@@ -41,17 +35,30 @@
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  margin-bottom: 10px;
 }
 .consultation-header p {
   color: #ddd;
   font-size: 1.1rem;
 }
 
-/* Form card */
-.consultation-form {
+/* Two-column layout */
+.consultation-content {
+  display: flex;
+  gap: 20px;
   width: 100%;
-  max-width: 600px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Map */
+.consultation-map {
+  flex: 1;
+  min-height: 400px;
+}
+
+/* Form */
+.consultation-form {
+  flex: 1;
   background: rgba(255, 255, 255, 0.95);
   padding: 35px;
   border-radius: 14px;
@@ -62,12 +69,10 @@
   color: #333;
 }
 
-/* Input Group with Icons */
+/* Inputs with icons */
 .input-group {
   position: relative;
-  width: 100%;
 }
-
 .input-group .input-icon {
   position: absolute;
   top: 50%;
@@ -76,32 +81,27 @@
   color: #666;
   font-size: 1.1rem;
 }
-
 .input-group input,
 .input-group select {
   width: 100%;
-  padding: 14px 16px 14px 44px; /* space for icon */
+  padding: 14px 16px 14px 44px;
   border: 1px solid #ccc;
   border-radius: 10px;
   font-size: 1rem;
   outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
 }
-
 .input-group input:focus,
 .input-group select:focus {
   border-color: #0056b3;
   box-shadow: 0 0 6px rgba(0, 86, 179, 0.3);
 }
 
-/* Textarea */
 textarea {
   padding: 14px 16px;
   border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
   outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
 }
 textarea:focus {
   border-color: #0056b3;
@@ -117,13 +117,13 @@ button {
   color: #fff;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: background 0.3s;
 }
 button:hover {
   background: #003f7f;
 }
 
-/* Status message */
+/* Status */
 .status-message {
   margin-top: 20px;
   font-size: 1rem;
@@ -138,4 +138,23 @@ button:hover {
 }
 .status-message.warning {
   color: #ff9800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .consultation-content {
+    flex-direction: column;
+  }
+
+  .consultation-map {
+    order: 1;
+    width: 100%;
+    height: 300px;
+  }
+
+  .consultation-form {
+    order: 2;
+    margin-top: 20px;
+    width: 100%;
+  }
 }
