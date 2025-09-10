@@ -1,0 +1,210 @@
+/* Hero Section */
+.contact-hero {
+  position: relative;
+  background: url("https://i.postimg.cc/9QsJFq7v/Mc8k-W4x9-Q3a-RR3-Rk-P5-Im-IMG-4417.avif") center/cover
+    no-repeat;
+  padding: 180px 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.contact-hero .overlay {
+  background: rgba(20, 20, 20, 0.65);
+  padding: 60px 20px;
+  border-radius: 12px;
+  display: inline-block;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Contact Details Section */
+.contact-details {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  margin: 80px auto;
+  max-width: 1100px;
+  padding: 50px 30px;
+  background: linear-gradient(135deg, #f8f8f8, #f0f0f0);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card {
+  flex: 1;
+  background: #fff;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 14px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card .icon {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: #b28d5f;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.contact-card p {
+  margin-bottom: 14px;
+  font-size: 1rem;
+  color: #555;
+}
+
+.contact-card a {
+  display: inline-block;
+  margin-top: 8px;
+  color: #b28d5f;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.contact-card a:hover {
+  color: #8f7044;
+  text-decoration: underline;
+  transform: scale(1.05);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-details {
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+}
+
+
+
+/* Contact Form + Map Section */
+.contact-form-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 80px auto;
+  padding: 40px 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.form-container {
+  flex: 1;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2c3e50;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #b28d5f;
+  outline: none;
+}
+
+form button {
+  background: #b28d5f;
+  color: #fff;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+form button:hover {
+  background: #8f7044;
+}
+
+.status {
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.map-container {
+  flex: 1;
+  text-align: center;
+}
+
+.map-container img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.map-container a {
+  display: inline-block;
+  margin-top: 12px;
+  color: #b28d5f;
+  text-decoration: none;
+}
+
+.map-container a:hover {
+  text-decoration: underline;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 60px;
+  height: 60px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 32px;
+  height: 32px;
+}
+

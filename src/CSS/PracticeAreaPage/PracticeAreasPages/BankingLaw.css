@@ -1,0 +1,256 @@
+.practice-hero {
+  position: relative;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.practice-hero .overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 35px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.practice-hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.practice-hero p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.practice-detail {
+  padding: 45px 20px;
+  max-width: 850px;
+  margin: auto;
+  line-height: 1.6;
+  animation: slideUp 0.8s ease-out;
+}
+
+.practice-detail h2 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+.practice-detail p,
+.practice-detail li {
+  font-size: 0.95rem;
+}
+
+.practice-detail ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.highlight {
+  background: rgba(240, 240, 240, 0.95);
+  border-left: 4px solid #004080;
+  border-radius: 8px;
+  padding: 25px;
+  margin: 25px auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.features {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  flex: 1;
+  min-width: 240px;
+  background: white;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: slideUp 1s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.feature-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+}
+
+.property-faq {
+  padding: 40px 20px;
+  background: rgba(0, 64, 128, 0.06);
+  animation: fadeIn 1s ease-in-out;
+}
+
+.property-faq h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  text-align: center;
+  color: #002244;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ccc;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item.open .faq-answer {
+  max-height: 220px;
+  opacity: 1;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.faq-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  transition: all 0.4s ease;
+}
+
+.contact-us-section {
+  text-align: center;
+  padding: 50px 20px;
+  background: #f8f9fa;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.contact-us-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  color: #003366;
+}
+
+.contact-us-section p {
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.contact-buttons a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+}
+
+.call-btn,
+.contact-page-btn,
+.whatsapp-btn {
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.call-btn {
+  background: #007bff;
+  color: white;
+}
+
+.call-btn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.contact-page-btn {
+  background: #ff9800;
+  color: white;
+}
+
+.contact-page-btn:hover {
+  background: #e68900;
+  transform: scale(1.05);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: #1ebe57;
+  transform: scale(1.05);
+}
+.icon {
+  font-size: 1.2rem;
+}
+
+/* Subtle Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating WhatsApp Button (Global) */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  font-size: 2rem; /* make icon bigger */
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  background-color: #20b954;
+}
+.practice-sidebar ul li a.active {
+  font-weight: bold;
+  color: #d32f2f; /* highlight color */
+  border-left: 3px solid #d32f2f;
+  padding-left: 8px;
+}

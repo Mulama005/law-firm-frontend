@@ -1,0 +1,126 @@
+/* ---------- HERO ---------- */
+.ourteam-hero {
+  position: relative;
+  padding: 6rem 2rem;
+  background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("https://i.postimg.cc/Y9ptng9J/premium-photo-1668058723804-d7dcd1ffa4c9.avif")
+    center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+}
+
+.ourteam-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.ourteam-hero p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ddd;
+}
+
+/* ---------- TEAM SECTION ---------- */
+.ourteam-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.ourteam-card {
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ourteam-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* ---------- IMAGE ---------- */
+.ourteam-img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ---------- TEXT ---------- */
+.ourteam-info {
+  padding: 1.5rem;
+}
+
+.ourteam-info h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+  color: #222;
+}
+
+.ourteam-info h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2563eb;
+  margin-bottom: 0.8rem;
+}
+
+.ourteam-info p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+  .ourteam-hero h1 {
+    font-size: 2rem;
+  }
+
+  .ourteam-hero p {
+    font-size: 1rem;
+  }
+
+  .ourteam-img {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ourteam-hero {
+    padding: 4rem 1rem;
+  }
+
+  .ourteam-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .ourteam-info p {
+    font-size: 0.9rem;
+  }
+}
+.ourteam-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.ourteam-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}

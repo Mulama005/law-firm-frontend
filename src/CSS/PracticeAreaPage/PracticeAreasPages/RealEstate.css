@@ -1,0 +1,395 @@
+/* ================================
+   HERO SECTION
+================================ */
+.practice-hero {
+  position: relative;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: center/cover no-repeat;
+  color: #fff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.practice-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+}
+
+.practice-hero .overlay {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+  
+}
+
+.practice-hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  opacity: 1;          /* always visible */
+  transform: none;     /* reset */
+  animation: none;     /* disable animation */
+}
+
+.practice-hero p {
+  font-size: 1.2rem;
+  opacity: 1;          /* always visible */
+  transform: none;
+  animation: none;     /* disable animation */
+}
+
+
+/* ================================
+   GENERAL SECTION
+================================ */
+.practice-detail {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 20px;
+  line-height: 1.7;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.practice-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+
+.practice-detail h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: #007bff;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-radius: 2px;
+}
+
+.practice-detail ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.practice-detail ul li {
+  margin-bottom: 10px;
+  padding-left: 5px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.practice-detail ul li:hover {
+  transform: translateX(6px);
+  color: #007bff;
+}
+
+/* ================================
+   HIGHLIGHT FEATURES
+================================ */
+.highlight {
+  background: linear-gradient(135deg, #f9f9f9, #f1f1f1);
+  padding: 60px 20px;
+  border-radius: 12px;
+  text-align: center;
+  animation: fadeIn 1s ease forwards;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.feature-card {
+  flex: 1 1 280px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: #007bff;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* ================================
+   FAQ SECTION
+================================ */
+.property-faq {
+  background: rgba(230, 245, 255, 0.6);
+  padding: 3rem 10%;
+  border-radius: 12px;
+  margin: 3rem 0;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.property-faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-item {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.faq-item:hover {
+  background: #f9f9ff;
+  transform: scale(1.01);
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question h3 {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.faq-question span {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.open .faq-question span {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.5;
+  animation: fadeDown 0.4s ease-in-out forwards;
+}
+
+/* ================================
+   CALL TO ACTION
+================================ */
+.consultation {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 70px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  animation: fadeInUp 1s ease forwards;
+}
+
+.consultation h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.consultation p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 30px;
+  background: #25d366;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  background: #20b955;
+  transform: scale(1.08);
+}
+
+/* ================================
+   SIDEBAR + CONTENT LAYOUT
+================================ */
+.practice-layout {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.practice-sidebar {
+  width: 250px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 100px;
+  align-self: flex-start;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.practice-sidebar h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.practice-sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.practice-sidebar ul li {
+  margin-bottom: 1rem;
+}
+
+.practice-sidebar ul li a {
+  display: block;
+  padding: 0.5rem 0.8rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #34495e;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.3s ease-in-out;
+}
+
+.practice-sidebar ul li a:hover {
+  background: #2c3e50;
+  color: #fff;
+  transform: translateX(4px);
+}
+
+.practice-sidebar ul li .active {
+  font-weight: bold;
+  color: #2c3e50;
+  background: #f0f0f0;
+  border-left: 4px solid #2c3e50;
+  padding-left: 10px;
+}
+
+/* ================================
+   FLOATING WHATSAPP BUTTON
+================================ */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  font-size: 2rem;
+  border-radius: 50%;
+  color: #fff;
+  background: #25d366;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+  background: #20b954;
+}
+
+/* ================================
+   ANIMATIONS
+================================ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Utility Animations */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+  opacity: 1 !important;
+  transition: opacity 1s ease;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 900px) {
+  .practice-layout {
+    flex-direction: column;
+  }
+
+  .practice-sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .features {
+    flex-direction: column;
+  }
+  .practice-detail,
+  .consultation,
+  .property-faq {
+    padding: 2rem 5%;
+  }
+}

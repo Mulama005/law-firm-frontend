@@ -1,0 +1,307 @@
+/* src/CSS/PracticeAreaPage/PracticeAreasPages/CorporateCommercial.css */
+
+/* Layout */
+.practice-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f9f9f9;
+}
+
+/* Sidebar */
+/* Sidebar */
+.practice-sidebar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  display: block;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Hover + Active */
+.practice-sidebar ul li a:hover,
+.practice-sidebar ul li a.active {
+  background: #f1f6ff;
+  color: #004080;
+  transform: translateX(4px);
+}
+
+/* Active Highlight (left border + stronger font weight) */
+.practice-sidebar ul li a.active {
+  font-weight: bold;
+  border-left: 4px solid #004080;
+  padding-left: 10px; /* offset to align after border */
+}
+
+
+/* Content */
+.practice-content {
+  flex: 1;
+  padding: 30px;
+}
+
+/* Hero Section */
+.practice-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 100px 20px;
+  color: #fff;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  overflow: hidden;
+}
+
+.practice-hero .overlay {
+  background: rgba(0, 64, 128, 0.6);
+  padding: 60px 20px;
+  border-radius: 12px;
+}
+
+.practice-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  animation: fadeDown 1s ease;
+}
+
+.practice-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+  animation: fadeUp 1.2s ease;
+}
+
+/* Sections */
+.practice-detail {
+  margin-bottom: 40px;
+}
+
+.practice-detail h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #004080;
+  position: relative;
+}
+
+.practice-detail h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: #004080;
+  border-radius: 3px;
+}
+
+.practice-detail p,
+.practice-detail ul {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.practice-detail ul {
+  padding-left: 20px;
+}
+
+.practice-detail ul li {
+  margin-bottom: 8px;
+}
+
+/* Highlight Section */
+.highlight {
+  background: #eef5ff;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #fff;
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 64, 128, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card i {
+  font-size: 2rem;
+  color: #004080;
+  margin-bottom: 12px;
+}
+
+/* FAQ Section */
+.corporate-faq {
+  margin-top: 50px;
+}
+
+.corporate-faq h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #004080;
+}
+
+.faq-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-item.open {
+  border-color: #004080;
+  box-shadow: 0 2px 10px rgba(0, 64, 128, 0.2);
+}
+
+.faq-question {
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #f1f6ff;
+}
+
+.faq-answer {
+  padding: 15px 20px;
+  background: #fff;
+  font-size: 0.95rem;
+  color: #444;
+  animation: fadeIn 0.4s ease;
+}
+
+/* Contact Section */
+.contact-us-section {
+  margin: 60px 0;
+  text-align: center;
+}
+
+.contact-us-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #004080;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.contact-buttons a {
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.call-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.call-btn:hover {
+  background: #0056b3;
+  transform: translateY(-2px);
+}
+
+.whatsapp-btn {
+  background: #25d366;
+  color: #fff;
+}
+
+.whatsapp-btn:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+.contact-page-btn {
+  background: #333;
+  color: #fff;
+}
+
+.contact-page-btn:hover {
+  background: #111;
+  transform: translateY(-2px);
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 1.8rem;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

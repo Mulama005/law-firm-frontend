@@ -1,0 +1,270 @@
+/* Practice Section Wrapper */
+.practice-section {
+  position: relative;
+  padding: 80px 20px;
+  background: #f8f9fa;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background Overlay */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  opacity: 0.15;
+  z-index: -1;
+}
+
+/* Section Heading */
+.practice-heading {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* Grid Layout */
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Practice Card */
+.practice-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  cursor: pointer;
+
+  /* Animation on scroll */
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Stagger effect for multiple cards */
+.practice-card:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.practice-card:nth-child(2) {
+  animation-delay: 0.7s;
+}
+.practice-card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+.practice-card:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+.practice-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Background image inside each card */
+.card-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: brightness(70%);
+  transition: transform 0.5s ease;
+}
+
+.practice-card:hover .card-bg {
+  transform: scale(1.2);
+}
+
+/* Overlay */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.2)
+  );
+  transition: background 0.4s ease;
+}
+
+.practice-card:hover .card-overlay {
+  background: linear-gradient(
+    to top,
+    rgba(44, 62, 80, 0.9),
+    rgba(44, 62, 80, 0.4)
+  );
+}
+
+/* Card Content */
+.card-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+/* Card Icon */
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #f1c40f;
+  display: inline-block;
+
+  /* Animation */
+  animation: bounce 3s infinite, glow 2s infinite alternate;
+}
+
+/* Icon Animations */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f1c40f, 0 0 10px #f39c12;
+  }
+  100% {
+    text-shadow: 0 0 15px #f39c12, 0 0 25px #e67e22;
+  }
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+/* Description */
+.card-description {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Card Link */
+.card-link {
+  color: #f1c40f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.card-link:hover {
+  color: #f39c12;
+  text-decoration: underline;
+}
+
+/* CTA Button */
+.cta-container {
+  margin-top: 50px;
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+  animation-delay: 1.3s;
+}
+
+.cta-button {
+  background: #2c3e50;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1.1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.cta-button:hover {
+  background: #f1c40f;
+  color: #2c3e50;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade + Slide Animation */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------------------
+   RESPONSIVENESS
+--------------------------------*/
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .practice-heading {
+    font-size: 2.2rem;
+  }
+  .card-title {
+    font-size: 1.2rem;
+  }
+  .card-description {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .practice-section {
+    padding: 50px 15px;
+  }
+  .practice-heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+  .practice-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+  }
+  .card-content {
+    padding: 20px 15px;
+  }
+  .card-icon {
+    font-size: 2.5rem;
+  }
+  .cta-button {
+    width: 100%;
+    padding: 14px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .practice-heading {
+    font-size: 1.8rem;
+  }
+  .card-title {
+    font-size: 1.1rem;
+  }
+  .card-description {
+    font-size: 0.85rem;
+  }
+}

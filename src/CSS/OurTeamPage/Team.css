@@ -1,0 +1,151 @@
+/* Hero Section */
+.team-hero {
+  position: relative;
+  height: 60vh;
+  background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.team-hero .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+.team-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+  animation: fadeInDown 1s ease forwards;
+}
+.team-hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* Team Container */
+.team-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Team Card */
+.team-card {
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.team-card.fade-in-up {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s ease;
+}
+.team-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.team-content.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image */
+.team-image img {
+  width: 350px;
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+.team-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Info */
+.team-info {
+  flex: 1;
+}
+.team-info h2 {
+  font-size: 2rem;
+  margin-bottom: 0.3rem;
+}
+.team-info h4 {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+.team-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #444;
+}
+
+/* Buttons */
+.team-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+}
+.btn.whatsapp { background: #25d366; }
+.btn.call { background: #007bff; }
+.btn.email { background: #ff5722; }
+
+.btn:hover {
+  opacity: 0.85;
+  transform: translateY(-3px);
+}
+
+/* Socials */
+.team-socials {
+  display: flex;
+  gap: 1rem;
+}
+.team-socials a {
+  color: #333;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.team-socials a:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .team-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .team-content.reverse {
+    flex-direction: column;
+  }
+  .team-image img {
+    width: 250px;
+  }
+}

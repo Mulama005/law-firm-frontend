@@ -1,0 +1,90 @@
+/* Hero Section */
+.debt-hero {
+  position: relative;
+  background: url("https://i.postimg.cc/CLHCqp8J/photo-1594675293766-c0587aaa5b79.avif")
+    center/cover no-repeat;
+  padding: 180px 20px; /* Larger for visual impact */
+  color: #fff;
+  text-align: center;
+}
+
+.debt-hero .overlay {
+  background: rgba(10, 10, 10, 0.65);
+  padding: 70px 25px;
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.debt-hero h1 {
+  font-size: 3.2rem;
+  font-family: "Merriweather", serif; /* ✅ Classic + vintage */
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+.debt-hero p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Body Content */
+.debt-content {
+  max-width: 950px;
+  margin: 70px auto;
+  padding: 0 20px;
+  font-family: "Lato", sans-serif;
+  line-height: 1.75;
+  color: #2c2c2c;
+}
+
+.debt-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-bottom: 2px solid #9c7c48; /* ✅ Vintage accent */
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.debt-content h3 {
+  margin-top: 35px;
+  color: #b28d5f; /* Muted gold accent */
+  font-size: 1.4rem;
+}
+
+.debt-content p {
+  margin-top: 12px;
+  font-size: 1rem;
+}
+
+.debt-content ul {
+  margin-top: 10px;
+  padding-left: 25px;
+}
+
+.debt-content ul li {
+  margin-bottom: 10px;
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: white;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: transform 0.2s;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}

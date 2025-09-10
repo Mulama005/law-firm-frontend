@@ -1,0 +1,21 @@
+/* src/CSS/BackToTop.css */
+.back-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  background: #2c3e50;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  padding: 15px 18px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background: #c8a97e; /* vintage gold accent */
+  transform: scale(1.1);
+}

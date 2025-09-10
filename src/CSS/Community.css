@@ -1,0 +1,137 @@
+/* Section container */
+.community-section {
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #f0f4ff, #dbeafe);
+  text-align: center;
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 80px auto;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+/* Fade-in when loaded */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Heading */
+.community-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e3a8a;
+}
+
+/* Form container */
+.community-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  flex-wrap: wrap; /* ✅ Responsive on mobile */
+}
+
+/* Input */
+.community-form input[type="email"] {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  min-width: 200px;
+}
+
+.community-form input[type="email"]:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px rgba(37, 99, 235, 0.3);
+}
+
+/* Button */
+.community-form button {
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  background: #2563eb;
+  color: #fff;
+  transition: background 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.community-form button:hover:not(:disabled) {
+  background: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.community-form button:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+}
+
+/* Spinner inside button */
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Feedback messages */
+.feedback-message {
+  margin-top: 16px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: opacity 0.4s ease;
+}
+
+/* Success */
+.success {
+  color: #16a34a;
+}
+
+/* Error */
+.error {
+  color: #dc2626;
+}
+
+/* Animations */
+.fade-in {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.shake {
+  animation: shakeAnim 0.4s ease;
+}
+
+@keyframes shakeAnim {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}

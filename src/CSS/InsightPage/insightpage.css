@@ -1,0 +1,169 @@
+/* ================= HERO SECTION ================= */
+.insights-hero {
+  position: relative;
+  background: url("https://i.postimg.cc/y6MXP2hq/photo-1603997992624-fe876f08fe16.avif") center/cover
+    no-repeat;
+  height: 45vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.insights-hero .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.insights-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.insights-hero p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ================= CATEGORY BADGES ================= */
+.category-badges {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 2rem 0;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background: #f1f1f1;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.badge:hover {
+  background: #0066cc;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Active Badge */
+.badge.active {
+  background: #004080;
+  color: #fff;
+  border: 2px solid #002b5c;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  transform: scale(1.1);
+}
+
+/* ================= SEARCH & FILTER ================= */
+.insights-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 1rem auto 2rem;
+  flex-wrap: wrap;
+  padding: 0 20px;
+}
+
+.insights-controls input,
+.insights-controls select {
+  padding: 10px 14px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.insights-controls input:focus,
+.insights-controls select:focus {
+  border-color: #0066cc;
+  box-shadow: 0 0 6px rgba(0, 102, 204, 0.4);
+}
+
+/* ================= INSIGHTS GRID ================= */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 20px 50px;
+}
+
+.insight-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.insight-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.insight-content {
+  padding: 1.2rem;
+}
+
+.insight-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #222;
+}
+
+.insight-content p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.insight-content a {
+  font-weight: 600;
+  color: #0066cc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.insight-content a:hover {
+  text-decoration: underline;
+  color: #004080;
+}
+
+/* ================= WHATSAPP FLOAT ================= */
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #25d366;
+  color: #fff;
+  font-size: 1.8rem;
+  padding: 14px 16px;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 1000;
+}
+
+.whatsapp-float:hover {
+  background: #1ebe5c;
+  transform: scale(1.1);
+}

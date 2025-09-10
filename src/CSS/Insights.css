@@ -1,0 +1,109 @@
+/* Background for Insights */
+.insights-section {
+  position: relative;
+  background: url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1920&q=80") no-repeat center center/cover;
+  background-attachment: scroll; /* ✅ scrolls normally */
+  padding: 80px 20px;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Overlay for readability */
+.insights-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+/* Content container */
+.insights-section .container {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.insights-header h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.insights-header p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #ddd;
+}
+
+/* Grid Layout */
+.insights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 50px;
+}
+
+.insight-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.insight-card:hover {
+  transform: translateY(-8px);
+}
+
+/* Image Styling */
+.insight-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.insight-content {
+  padding: 20px;
+}
+
+.insight-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.insight-content p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.insight-content a {
+  color: #ffd700;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.insight-content a:hover {
+  color: #fff;
+}
+
+/* Footer Button */
+.insights-footer .insights-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.insights-footer .insights-btn:hover {
+  background: #ffae00;
+}
