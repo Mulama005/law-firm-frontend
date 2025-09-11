@@ -51,10 +51,7 @@
 }
 
 /* Map */
-.consultation-map {
-  flex: 1;
-  min-height: 400px;
-}
+
 
 /* Form */
 .consultation-form {
@@ -146,11 +143,6 @@ button:hover {
     flex-direction: column;
   }
 
-  .consultation-map {
-    order: 1;
-    width: 100%;
-    height: 300px;
-  }
 
   .consultation-form {
     order: 2;
