@@ -66,7 +66,7 @@ function Consultation() {
         <div className="consultation-map">
           <iframe
             title="Google Map"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8451554713274!2d36.799609973631256!3d-1.265502798722441!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f17406a859d11%3A0xe8829019d473446a!2sDelta%20Towers%2C%20Waiyaki%20Wy%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1757571541923!5m2!1sen!2ske" 
             width="100%"
             height="100%"
             style={{ border: 0, borderRadius: "14px" }}
