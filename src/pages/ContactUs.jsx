@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../CSS/ContactUs.css";
+import API_BASE_URL from "../config";
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -26,7 +27,7 @@ function ContactUs() {
     setStatus("Submitting...");
 
     try {
-      const response = await fetch("http://127.0.0.1:8000/api/contact/", {
+      const response = await fetch(`${API_BASE_URL}/api/contact/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
