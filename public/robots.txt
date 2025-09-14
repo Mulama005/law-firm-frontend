@@ -1,3 +1,14 @@
-# https://www.robotstxt.org/robotstxt.html
+# Allow all search engines to crawl
 User-agent: *
-Disallow:
+
+# Block crawling of API endpoints (not needed for SEO)
+Disallow: /api/
+
+# Block static assets (not useful for indexing)
+Disallow: /public/
+
+# Allow everything else
+Allow: /
+
+# Point search engines to your sitemap
+Sitemap: https://eredimulamadovocates.web.app/sitemap.xml
