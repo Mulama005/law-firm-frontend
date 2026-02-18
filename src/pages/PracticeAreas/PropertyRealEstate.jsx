@@ -4,13 +4,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "../../CSS/PracticeAreaPage/PracticeAreasPages/RealEstate.css";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import useInView from '../../hooks/useinView'; // 👈 import hook
+import useInView from '../../hooks/useinView'; 
 
 function PropertyRealEstate() {
   const [openIndex, setOpenIndex] = useState(null);
   const location = useLocation();
 
-  // 👇 Attach hook to each section
+  // Attach hook to each section
   const [overviewRef, overviewVisible] = useInView();
   const [servicesRef, servicesVisible] = useInView();
   const [whyUsRef, whyUsVisible] = useInView();
