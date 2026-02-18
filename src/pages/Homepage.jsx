@@ -54,7 +54,7 @@ function Homepage() {
         <Insights />
       </section>
 
-      {/* ✅ Join Community Section (Subscribe form) */}
+      {/*Join Community Section (Subscribe form) */}
       <section id="subscribe">
         <Community />
       </section>
