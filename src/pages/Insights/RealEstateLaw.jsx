@@ -1,8 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import Header from "../../components/Header";   // ✅ corrected path
-import Footer from "../../components/Footer";   // ✅ corrected path
-import "../../CSS/InsightPage/RealEstateLaw.css";// ✅ Styling
+import Header from "../../components/Header";   
+import Footer from "../../components/Footer";   
+import "../../CSS/InsightPage/RealEstateLaw.css";
 
 function RealEstate() {
   return (
