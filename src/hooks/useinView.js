@@ -9,8 +9,8 @@ function useInView(options) {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);           // 👈 Once visible, keep it true
-          observer.unobserve(entry.target); // 👈 Stop observing (no reset)
+          setIsVisible(true);           
+          observer.unobserve(entry.target); 
         }
       },
       { threshold: 0.1, ...options }
