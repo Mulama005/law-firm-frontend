@@ -43,7 +43,7 @@ function CorporateCommercial() {
       <Header />
 
       <div className="practice-layout">
-        {/* ✅ Sticky Sidebar with Active Highlight */}
+        {/*Sticky Sidebar with Active Highlight */}
         <aside className="practice-sidebar">
           <h3>Practice Areas</h3>
           <ul>
@@ -82,7 +82,7 @@ function CorporateCommercial() {
           </ul>
         </aside>
 
-        {/* ✅ Main Content */}
+        {/*Main Content */}
         <main className="practice-content">
           {/* Hero Section */}
           <section
