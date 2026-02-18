@@ -11,7 +11,7 @@ function ProcurementAssetDisposal() {
   const [openIndex, setOpenIndex] = useState(null);
   const location = useLocation();
 
-  // ✅ Scroll Animations
+  //Scroll Animations
   const { ref: overviewRef, inView: overviewInView } = useInView({ threshold: 0.2 });
   const { ref: servicesRef, inView: servicesInView } = useInView({ threshold: 0.2 });
   const { ref: whyChooseRef, inView: whyChooseInView } = useInView({ threshold: 0.2 });
