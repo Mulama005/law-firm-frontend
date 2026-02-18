@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom"; // ✅ Import Link
+import { Link } from "react-router-dom"; 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import useinView from "../hooks/useinView";
@@ -10,7 +10,7 @@ const insights = [
   {
     title: "Navigating Kenya’s Real Estate Law",
     category: "Real Estate",
-    slug: "real-estate-law", // ✅ Add slug
+    slug: "real-estate-law", 
     excerpt:
       "Understanding property and land transactions in Kenya is key for both individuals and corporations...",
     image:
@@ -19,7 +19,7 @@ const insights = [
   {
     title: "Corporate Compliance in 2025",
     category: "Corporate Law",
-    slug: "corporate-compliance", // ✅ Add slug
+    slug: "corporate-compliance", 
     excerpt:
       "Stay ahead of evolving compliance requirements and protect your business from regulatory pitfalls...",
     image:
@@ -28,7 +28,7 @@ const insights = [
   {
     title: "Debt Recovery & Banking Law",
     category: "Banking Law",
-    slug: "debt-recovery", // ✅ Add slug
+    slug: "debt-recovery", 
     excerpt:
       "Explore strategies for efficient debt collection while maintaining ethical and professional standards...",
     image:
@@ -36,7 +36,7 @@ const insights = [
   },
 ];
 
-/* ✅ Card Component */
+/*Card Component */
 function InsightCard({ item, index }) {
   const [cardRef, cardInView] = useinView({ threshold: 0.2 });
 
@@ -55,7 +55,7 @@ function InsightCard({ item, index }) {
       <div className="insight-content">
         <h3>{item.title}</h3>
         <p>{item.excerpt}</p>
-        {/* ✅ Dynamic link to slug page */}
+        {/*Dynamic link to slug page */}
         <Link to={`/insights-page/${item.slug}`}>Read More →</Link>
       </div>
     </motion.div>
