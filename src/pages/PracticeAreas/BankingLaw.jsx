@@ -5,13 +5,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import "../../CSS/PracticeAreaPage/PracticeAreasPages/BankingLaw.css";
 import { FaWhatsapp, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
-import useInView from "../../hooks/useinView"; // ✅ import hook
+import useInView from "../../hooks/useinView"; 
 
 function BankingLaw() {
   const [openIndex, setOpenIndex] = useState(null);
   const location = useLocation();
 
-  // ✅ attach hook for sections
+  //attach hook for sections
   const [overviewRef, overviewVisible] = useInView();
   const [servicesRef, servicesVisible] = useInView();
   const [whyUsRef, whyUsVisible] = useInView();
@@ -51,7 +51,7 @@ function BankingLaw() {
       <Header />
 
       <div className="practice-layout">
-        {/* ✅ Sidebar Navigation */}
+        {/*Sidebar Navigation */}
         <aside className="practice-sidebar">
           <h3>Practice Areas</h3>
           <ul>
@@ -98,7 +98,7 @@ function BankingLaw() {
           </ul>
         </aside>
 
-        {/* ✅ Main Content */}
+        {/*Main Content */}
         <main className="practice-content">
           {/* Hero Section */}
           <section
