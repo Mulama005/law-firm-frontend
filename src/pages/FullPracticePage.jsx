@@ -40,7 +40,7 @@ function PracticeAreas() {
     },
   ];
 
-  // ✅ Intersection Observer for fade-in animation
+  // Intersection Observer for fade-in animation
   useEffect(() => {
     const sections = document.querySelectorAll(
       ".practice-card, .faq, .consultation"
@@ -67,7 +67,7 @@ function PracticeAreas() {
     <>
       <Header />
 
-      {/* ✅ Hero Section */}
+      {/*Hero Section */}
       <section
   className="hero"
   style={{
@@ -89,7 +89,7 @@ function PracticeAreas() {
   </div>
 </section>
 
-      {/* ✅ Practice Areas Section (white background) */}
+      {/*Practice Areas Section (white background) */}
       <section className="practice-areas">
         <div className="content">
           {areas.map((area, index) => (
@@ -107,11 +107,11 @@ function PracticeAreas() {
         </div>
       </section>
 
-      {/* ✅ FAQ Section with Accordion */}
+      {/*FAQ Section with Accordion */}
 <section className="faq">
   <h2>Frequently Asked Questions</h2>
 
-  {/* 🔍 Search Bar */}
+  {/*Search Bar */}
   <input
     type="text"
     placeholder="Search FAQs..."
@@ -171,7 +171,7 @@ function PracticeAreas() {
 </section>
 
 
-      {/* ✅ Consultation Section */}
+      {/*Consultation Section */}
       <section className="consultation">
         <h2>Schedule a Consultation</h2>
         <p>
